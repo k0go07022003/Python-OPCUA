@@ -1,6 +1,16 @@
 # Python-OPCUA
 How to connect Python script to PLC via OPCUA
 
+If u want do this with security connection you need to set this:
+
+client.set_security_string("Basic256Sha256,SignAndEncrypt,cert.der,key.pem")
+
+client.set_user("twoja_nazwa_użytkownika")
+
+client.set_password("twoje_hasło")
+
+That is all :)
+
     client = Client("opc.tcp://127.0.0.1:4840") //Codesys OPCUA server address
 
     tag_struct = Tags.TestTags //Import array of variables 
